@@ -2,9 +2,13 @@
 
 A new Flutter project.
 
-## Getting Started
+## Flutter Intent
 
-This project is a starting point for a Flutter application.
+The intent in Android is the "payload" for the communication between and within apps. This plugin passes the Intent, that "started" the Activity to the flutter environment. It also passes any "new Intents" that are received (via Activity.onNewIntent) while the Activity is already "started".
+
+If the Intent was "started" via startActivityForResult, then this plugin also sends additional information (package name and app signature) about the "calling" Android Component and can send "result" back (via Activity.setResult) to it.
+
+*Any contribution, idea, criticism, or feedback is welcomed*
 
 A few resources to get you started if this is your first Flutter project:
 
