@@ -70,15 +70,27 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            _buildFromIntent("INITIAL", _intent),
-            StreamBuilder<Intent?>(
-              stream: ReceiveIntent.receivedIntentStream,
-              builder: (context, snapshot) =>
-                  _buildFromIntent("STREAMED", snapshot.data),
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 15,
+            vertical: 20,
+          ),
+          child: Column(
+            children: [
+              _buildFromIntent("INITIAL", _intent),
+              const SizedBox(
+                height: 30,
+              ),
+              StreamBuilder<Intent?>(
+                  stream: ReceiveIntent.receivedIntentStream,
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      return _buildFromIntent("STREAMED", snapshot.data);
+                    }
+                    return const Text('No Data');
+                  })
+            ],
+          ),
         ),
       ),
     );
