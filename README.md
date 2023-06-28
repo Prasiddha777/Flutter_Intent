@@ -10,7 +10,7 @@ If the Intent was "started" via startActivityForResult, then this plugin also se
 
 *Any contribution, idea, criticism, or feedback is welcomed*
 
-<img src="https://raw.githubusercontent.com/Prasiddha777/Flutter_Intent/main/assets/bg.png" alt="bg" width="500" height="600">
+<img src="https://raw.githubusercontent.com/Prasiddha777/Flutter_Intent/main/assets/bg.png" alt="bg" width="700" height="600">
 
 A few resources to get you started if this is your first Flutter project:
 
